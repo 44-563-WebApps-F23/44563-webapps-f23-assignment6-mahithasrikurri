@@ -14,7 +14,7 @@
     <label for="hidden_author">The hidden author name</label>
     <input type="password" id="hidden_author" value="Dickens">
     <br>
-    <label for="guess">Guess the author</label>
+    <label for="guess it">Guess the author</label>
     <input type="text" id="guess">
     <br>
     <br>
@@ -35,11 +35,11 @@
         if(hidden_author == guess){
             good++
             alert("You got it right");
-            out.innerHTML = "Good Count: " + good
+            out.innerHTML = "Correct Count: " + good
         } else {
             oops++
             alert("Sorry");
-            out.innerHTML = "Bad Count: "+ oops
+            out.innerHTML = "wrong Count: "+ oops
         }
     }
   </script>
