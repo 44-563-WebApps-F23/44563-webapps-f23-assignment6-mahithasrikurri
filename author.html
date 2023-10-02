@@ -42,7 +42,29 @@
             out.innerHTML = "wrong Count: "+ oops
         }
     }
+    let use_Image = 1;
+        function selectImage() {
+            var image = document.getElementById("Irving");
+            switch (use_Image) {
+                case 1: {
+                    image.src = "Miami city.png";
+                    use_Image = 2;
+                    break;
+                }
+                case 2: {
+                    image.src = "Irving city.png";
+                    use_Image = 3;
+                    break;
+                }
+                case 3: {
+                    image.src = "Rome city.png";
+                    use_Image = 1;
+                    break;
+                }
+            }
+        }
   </script>
-
+  <img src="Irving city.png" id="Irving" height=100 width=100 alt="Image of Irving" onclick="selectImage()">
+</div>
 </body>
 </html> 
