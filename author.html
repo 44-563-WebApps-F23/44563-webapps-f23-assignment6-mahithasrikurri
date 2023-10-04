@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>assignment6</title>
+    <title>Author page</title>
     <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -59,8 +59,15 @@
             oops++
             alert("Sorry");
             out.innerHTML = "wrong Count: "+ oops
+            if(oops > 7) {
+                    incorrectGuesses()
+                }
+            }
         }
-    }
+
+        function incorrectGuesses(){
+            alert("Sorry, ran out of guesses.");
+        }
     </script>
     <div>
     <img src="Rome city.png" id="Rome city" id="imageSrc" style="height: 100px;width: 100px;" alt="image Rome city" onclick="selectImage()"
