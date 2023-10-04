@@ -2,6 +2,15 @@
 <html>
 <head>
     <title>assignment6</title>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </head>
  
 <body>
@@ -11,17 +20,21 @@
 
 
 <form>
-    <label for="hidden_author">The hidden author name</label>
-    <input type="password" id="hidden_author" value="Dickens">
+   &nbsp;&nbsp;&nbsp;<b><label for="hidden_author">The hidden author name</label></b>
+   &nbsp;&nbsp;&nbsp;<input type="password" id="hidden_author" value="Dickens"><br>
+   &nbsp;&nbsp;&nbsp;<b><label for="guess it">Guess the author</label></b>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="guess">
     <br>
-    <label for="guess it">Guess the author</label>
-    <input type="text" id="guess">
-    <br>
-    <br>
-    <input type="button" onclick="checkAuthor()" value="Check the guess">
+    &nbsp;&nbsp;&nbsp;<input type="button"  class="btn btn-success" id="resultButton" onclick="checkAuthor()" value="Check the guess">
   </form>
   
   <p id="result">This text will be replaced with count</p>
+  <br>
+  <div class="container">
+      <b>
+          <p class=".text-primary" style="font-size: larger;" id="result"> Right/Wrong ???</p>
+      </b>
+  </div>
   
   <script> 
     var good=0;
@@ -42,29 +55,33 @@
             out.innerHTML = "wrong Count: "+ oops
         }
     }
-    let use_Image = 1;
+    </script>
+    <div>
+    <img src="Rome city.png" id="Rome city" id="imageSrc" style="height: 100px;width: 100px;" alt="image Rome city" onclick="selectImage()"
+        class="container">
+    <script>
+    let useImage = 1;
         function selectImage() {
-            var image = document.getElementById("Irving");
-            switch (use_Image) {
+            var image = document.getElementById("Rome city");
+            switch (useImage) {
                 case 1: {
                     image.src = "Miami city.png";
-                    use_Image = 2;
+                    useImage = 2;
                     break;
                 }
                 case 2: {
                     image.src = "Irving city.png";
-                    use_Image = 3;
+                    useImage = 3;
                     break;
                 }
                 case 3: {
                     image.src = "Rome city.png";
-                    use_Image = 1;
+                    useImage = 1;
                     break;
                 }
             }
         }
   </script>
-  <img src="Irving city.png" id="Irving" height=100 width=100 alt="Image of Irving" onclick="selectImage()">
-</div>
+   </div>
 </body>
 </html> 
